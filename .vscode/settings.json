@@ -1,5 +1,7 @@
 {
-    "ruby.rubocop.onSave": false,
-    "ruby.rubocop.useBundler": true,
-    "ruby.rubocop.executePath": "/Users/prasannaboga/.rvm/gems/ruby-3.0.1@project19/wrappers/"
+  "ruby.format": "rufo",
+  "ruby.rubocop.onSave": false,
+  "ruby.rubocop.useBundler": true,
+  "ruby.rubocop.executePath": "/Users/prasannaboga/.rvm/gems/ruby-3.0.1@project19/wrappers/",
+  "rufo.exe": "/Users/prasannaboga/.rvm/gems/ruby-3.0.1@project19/bin/rufo"
 }

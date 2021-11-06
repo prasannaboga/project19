@@ -5,7 +5,7 @@ RSpec.describe Project19 do
     expect(Project19::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "has a version 0.1.0" do
+    expect(Project19::VERSION).to eq("0.1.0")
   end
 end
