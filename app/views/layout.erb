@@ -11,5 +11,10 @@
   </head>
   <body class='container'>
     <%= yield %>
+    <div class="row fixed-bottom gy-1">
+      <div class="col">
+        <div class="p-1 border bg-light"> <%= ENV["SERVER_NAME"]%>: <%= ENV["SERVER_START_AT"]%></div>
+      </div>
+    </div>
   </body>
 </html>

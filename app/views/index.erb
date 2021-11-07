@@ -1,2 +1,19 @@
-HELLOWORLD
-<%= server_name %>
+<div class="row">
+  <div class="col-6">
+    <ul class="list-group">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">A fourth item</li>
+      <li class="list-group-item">And a fifth one</li>
+    </ul>
+  </div>
+  <div class="col-6">
+    <form action="/create_job" method="post">
+      <div class="input-group mb-3">
+        <input type="number" min="0" max="10" class="form-control" placeholder="Number of Jobs" name="no_of_jobs">
+        <button class="btn btn-primary" type="submit">Create Job</button>
+      </div>
+    </form>
+  </div>
+</div>

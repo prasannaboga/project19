@@ -26,4 +26,10 @@ class WebApp < Sinatra::Base
       server_name: ENV["SERVER_NAME"]
     }
   end
+
+  post "/create_job" do
+    no_of_jobs = params[:no_of_jobs].to_i
+    logger.info "Number of Jobs :: #{no_of_jobs}"
+    redirect "/"
+  end
 end
