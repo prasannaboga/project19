@@ -2,9 +2,7 @@
 
 ## FIXME
 
-- [ ] Development env files are not reload
-
-- [ ] Static files are not loading
+- [ ] Auto reload changes are not working in development
 
 ## Usage
 

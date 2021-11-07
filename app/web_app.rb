@@ -6,14 +6,12 @@ require "json"
 require "rack"
 require "sinatra"
 
-
 # Webapp to sinatra server
 class WebApp < Sinatra::Base
   enable :static
   enable :logging
 
   set :environment, ENV["APP_ENV"]
-  set :public_folder, "#{__dir__}/public"
   set :logger, Logger.new($stdout)
   set :server, :puma
 
@@ -22,13 +20,10 @@ class WebApp < Sinatra::Base
   end
 
   get "/" do
-
-    puts settings.public_folder
-
     erb :index, locals: {
       environment: settings.environment,
       server_start_at: ENV["SERVER_START_AT"],
-      server_name: ENV["SERVER_NAME"],
+      server_name: ENV["SERVER_NAME"]
     }
   end
 end
