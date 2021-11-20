@@ -5,6 +5,7 @@ require "logger"
 require "json"
 require "rack"
 require "sinatra"
+require_relative "workers/worker_one"
 
 # Webapp to sinatra server
 class WebApp < Sinatra::Base
@@ -29,7 +30,12 @@ class WebApp < Sinatra::Base
 
   post "/create_job" do
     no_of_jobs = params[:no_of_jobs].to_i
-    logger.info "Number of Jobs :: #{no_of_jobs}"
+    queue = params[:queue]
+    queue ||= "apple"
+    logger.info "Number of Jobs :: #{no_of_jobs} on queue :: #{queue}"
+    no_of_jobs.times do
+      WorkerOne.set(queue: queue.to_sym).perform_async
+    end
     redirect "/"
   end
 end

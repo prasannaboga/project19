@@ -10,10 +10,16 @@
   </div>
   <div class="col-6">
     <form action="/create_job" method="post">
-      <div class="input-group mb-3">
+      <div class="mb-3">
         <input type="number" min="0" max="10" class="form-control" placeholder="Number of Jobs" name="no_of_jobs">
-        <button class="btn btn-primary" type="submit">Create Job</button>
       </div>
+      <div class="mb-3">
+        <select class="form-select" aria-label="Default select example" name="queue">
+          <option value="apple">Apple</option>
+          <option value="ball">Ball</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Create Job</button>
     </form>
   </div>
 </div>

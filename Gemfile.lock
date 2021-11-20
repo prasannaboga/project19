@@ -7,6 +7,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    connection_pool (2.2.5)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     multi_json (1.15.0)
@@ -23,6 +24,7 @@ GEM
       rack
     rainbow (3.0.0)
     rake (13.0.6)
+    redis (4.5.1)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec (3.10.0)
@@ -51,6 +53,10 @@ GEM
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
+    sidekiq (6.3.1)
+      connection_pool (>= 2.2.2)
+      rack (~> 2.0)
+      redis (>= 4.2.0)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -75,6 +81,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.7)
+  sidekiq (= 6.3.1)
   sinatra (= 2.1.0)
   sinatra-contrib (= 2.1.0)
 
