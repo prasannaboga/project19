@@ -5,6 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in project19.gemspec
 gemspec
 
+gem "aws-sdk-cloudwatch", "1.58"
 gem "dotenv", "2.7.6"
 gem "puma", "5.5.2"
 gem "rake", "~> 13.0"

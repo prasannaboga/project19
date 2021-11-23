@@ -34,7 +34,7 @@ class WebApp < Sinatra::Base
     queue ||= "apple"
     logger.info "Number of Jobs :: #{no_of_jobs} on queue :: #{queue}"
     no_of_jobs.times do
-      WorkerOne.set(queue: queue.to_sym).perform_async
+      WorkerOne.set(queue: queue.to_sym).perform_async(queue: queue)
     end
     redirect "/"
   end
