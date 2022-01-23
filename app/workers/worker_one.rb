@@ -1,5 +1,7 @@
 require "aws-sdk-cloudwatch"
-require "dotenv/load"
+require "dotenv"
+
+Dotenv.load(".env")
 
 Sidekiq.configure_server do |config|
   config.redis = {
@@ -14,9 +16,7 @@ class WorkerOne
   def perform(opts)
     queue = opts["queue"]
     client = Aws::CloudWatch::Client.new(
-      region: "us-east-1",
-      access_key_id: ENV["AWS_ACCESS_KEY_ID"],
-      secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+      region: "us-east-1"
     )
     client.put_metric_data(
       namespace: "project19",
